@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './question.dart';
+import './answer.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
@@ -30,6 +31,7 @@ class _MyAppState extends State<MyApp>{
       'this is second question',
       'this is third question',
       'this is fourth question',
+      'thank you'
     ];
     return Scaffold(
       appBar: AppBar(
@@ -40,34 +42,10 @@ class _MyAppState extends State<MyApp>{
       body: Column(
         children: [
           Question(question[_questionIndex]),
-          ElevatedButton(
-              onPressed: _answer,
-              child: Text('option1'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.green[600]
-              ),
-          ),
-          ElevatedButton(
-            onPressed: _answer,
-            child: Text('option1'),
-            style: ElevatedButton.styleFrom(
-                primary: Colors.green[600]
-            ),
-          ),
-          ElevatedButton(
-            onPressed: _answer,
-            child: Text('option1'),
-            style: ElevatedButton.styleFrom(
-                primary: Colors.green[600]
-            ),
-          ),
-          ElevatedButton(
-            onPressed: _answer,
-            child: Text('option1'),
-            style: ElevatedButton.styleFrom(
-                primary: Colors.green[600]
-            ),
-          )
+          Answer(_answer),
+          Answer(_answer),
+          Answer(_answer),
+          Answer(_answer),
         ],
       ),
       floatingActionButton: FloatingActionButton(
