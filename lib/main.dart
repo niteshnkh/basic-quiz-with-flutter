@@ -70,6 +70,15 @@ class _MyAppState extends State<MyApp>{
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('next page is not available yet');
+        },
+        child: Icon(
+          Icons.forward,
+        ),
+        backgroundColor: Colors.green[600],
+      ),
     );
   }
 }
